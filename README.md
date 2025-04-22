@@ -61,8 +61,8 @@
  height="600"
  frameborder="0"
  ></iframe>
-
-##### 2.1 Bivariate Analysis (Calories vs Cooking Time)
+ 
+ ##### 2.1 Bivariate Analysis (Calories vs Cooking Time)
 * ##### Below shows the relationship between calories and cooking time in the dataset limited to 5000 for clarity. It seems many recipes have similar calorie counts and it seems as though the longer a recipe takes it doesn't necessarily translate to more calories according to the trend since the variance of the data seems high. However we see a bit of cluster of points between 0-50 minutes being under 500 calories.
  <iframe
  src="assets/min_cook_dist.html"
@@ -102,8 +102,8 @@
     * ##### Number of Ingredients (`n_ingredients`) 
 
 ### Baseline Model
-* ##### To establish a starting point for our prediction we trained our Baseline Model using **Linear Regression**. The model used a pipeline that included feature scaling via StandardScaler so we can directly and accurately compare our numeric values. We didn't use any categorical variables so no encoding was needed, and the total number of quantitative features we used for predictions was 3 (`minutes`, `n_steps`, `n_ingredients`) and the resulting **Baseline Model MSE** was `~88642.90`.
-* ##### Our **Root Mean Squared Error (RMSE)** was `~297.7` which means our predictions were off by 297 calories on average, which is pretty large. These results definitely leave room for improvement, so I wouldn't necessarily call our model "good" just yet. The R² score also suggests that approximately 6.73% of the variance in cooking times is explained by the model. Our results of a high MSE show signs of underfitting so we may have to change our model.
+* ##### To establish a starting point for our prediction we trained our Baseline Model using **Linear Regression**. The model used a pipeline that included feature scaling via StandardScaler so we can directly and accurately compare our numeric values. We didn't use any categorical variables so no encoding was needed, and the total number of quantitative features we used for predictions was 3 (`minutes`, `n_steps`, `n_ingredients`) and the resulting **Baseline Model MSE** was `≈88642.90`.
+* ##### Our **Root Mean Squared Error (RMSE)** was `≈297.7` which means our predictions were off by 297 calories on average, which is pretty large. These results definitely leave room for improvement, so I wouldn't necessarily call our model "good" just yet. The R² score also suggests that approximately 6.73% of the variance in cooking times is explained by the model. Our results of a high MSE show signs of underfitting so we may have to change our model.
 
 ### Final Model
 #### Feature Engineering
@@ -125,6 +125,7 @@
 * ##### Our best performing model was when:
     * ##### PolynomialFeatures(degree=2)
     * ##### ridge_alpha = 10
+
 #### Performance Comparison
 
 | Model                                                          | MSE        | RMSE    | R²       |
