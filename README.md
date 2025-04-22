@@ -36,12 +36,33 @@ index  | minutes   | calories   | n_steps   | n_ingredients    |
 |83779 | 40        | 59.2       | 7         | 8                |
 |83780 | 29        | 188.0      | 9         | 10               |
 |83781 | 20        | 174.9      | 5         | 7                |
-##### 1. Univariate Analysis (Calories)
+##### 1.1 Univariate Analysis (Calories)
 * ##### Below is the distribution of calories in the dataset limited to 5000 for clarity. It has a strong right skew which means most people's recipes typically fall between 150-500 calories per recipe.
-(insert image)
-##### 2. Bivariate Analysis (Calories vs Cooking Time)
+ <iframe
+ src="assets/cal_dist.html"
+ width="800"
+ height="600"
+ frameborder="0"
+ ></iframe>
+
+##### 1.2 Univariate Analysis (Cooking Time)
+* ##### Below is the distribution of cooking times (minutes) in the dataset limited to 5000 for clarity. It has a strong right skew just like our calorie distribution which by observation means most people don't cook for more than an 1 hour.
+ <iframe
+ src="assets/min_dist.html"
+ width="800"
+ height="600"
+ frameborder="0"
+ ></iframe>
+
+##### 2.1 Bivariate Analysis (Calories vs Cooking Time)
 * ##### Below shows the relationship between calories and cooking time in the dataset limited to 5000 for clarity. It seems many recipes have similar calorie counts and it seems as though the longer a recipe takes it doesn't necessarily translate to more calories according to the trend since the variance of the data seems high. However we see a bit of cluster of points between 0-50 minutes being under 500 calories.
-(insert image)
+ <iframe
+ src="assets/min_cook_dist.html"
+ width="800"
+ height="600"
+ frameborder="0"
+ ></iframe>
+
 #### Interesting Aggregates
 | Cooking Time (minutes) | Average Calories |
 |------------------------|------------------|
