@@ -65,15 +65,7 @@
  ></iframe>
 
 #### Interesting Aggregates
-| Cooking Time (Minutes) | Average Calories |
-|------------------------|------------------|
-| 0–10                   | 269.74           |
-| 11–20                  | 322.87           |
-| 21–30                  | 358.55           |
-| 31–45                  | 381.42           |
-| 46–60                  | 423.89           |
-| 61–120                 | 456.93           |
-| 120+                   | 473.11           |
+'| minute_bins   |   calories |\n|:--------------|-----------:|\n| 0-10          |    269.744 |\n| 11-20         |    322.874 |\n| 21-30         |    358.547 |\n| 31-45         |    381.415 |\n| 46-60         |    423.886 |\n| 61-120        |    456.927 |\n| 120+          |    473.112 |'
 
 ##### Acoording to the table we group the cooking time in minutes into 10 minute bins and calculate the average calories per bin. According to the table we see an upward trend in the data which supports the idea the longe recipes seem to be more calorie dense.
 #### Imputation
@@ -124,12 +116,5 @@
 #### Our final model significant improves:
 * ##### By capturing the nonlinear relationships
 * ##### By adding domain-informed features
-| semester    | Count |
-|-------------|-------|
-| Fall 2020   | 3     |
-| Winter 2021 | 2     |
-| Spring 2021 | 6     |
-| Summer 2021 | 4     |
-| Fall 2021   | 55    |
 
 #### This is a >60% reduction in MSE which means our predications are on average much closer to the actual calorie values, I would say this model is not that bad!
