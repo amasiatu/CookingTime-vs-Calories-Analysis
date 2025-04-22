@@ -72,8 +72,9 @@
  ></iframe>
 
 #### Interesting Aggregates
+
 | Cooking Time (Minutes) | Average Calories |
-|------------------------|------------------| 
+|------------------------|------------------|
 | 0–10                   | 269.74           |
 | 11–20                  | 322.87           |
 | 21–30                  | 358.55           |
@@ -81,6 +82,8 @@
 | 46–60                  | 423.89           |
 | 61–120                 | 456.93           |
 | 120+                   | 473.11           |
+
+
 
 ##### Acoording to the table we group the cooking time in minutes into 10 minute bins and calculate the average calories per bin. According to the table we see an upward trend in the data which supports the idea the longe recipes seem to be more calorie dense.
 #### Imputation
