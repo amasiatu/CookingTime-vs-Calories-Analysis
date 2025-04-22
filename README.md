@@ -92,8 +92,8 @@
     * ##### Number of Ingredients (`n_ingredients`) 
 
 ### Baseline Model
-* ##### To establish a starting point for our prediction we trained our Baseline Model using **Linear Regression**. The model used a pipeline that included feature scaling via StandardScaler so we can directly and accurately compare our numeric values. We didn't use any categorical variables so no encoding was needed and the resulting **Baseline Model MSE** was `~88642.90`.
-* ##### Our **Root Mean Squared Error (RMSE)** was `~297.7` which means our predictions were off by 297 calories on average, which is pretty large. These results definitely leave room for improvement, so I wouldn't necessarily call our model "good" just yet. Our results of a high MSE show signs of underfitting so we may have to change our model.
+* ##### To establish a starting point for our prediction we trained our Baseline Model using **Linear Regression**. The model used a pipeline that included feature scaling via StandardScaler so we can directly and accurately compare our numeric values. We didn't use any categorical variables so no encoding was needed, and the total number of quantitative features we used for predictions was 3 (`minutes`, `n_steps`, `n_ingredients`) and the resulting **Baseline Model MSE** was `~88642.90`.
+* ##### Our **Root Mean Squared Error (RMSE)** was `~297.7` which means our predictions were off by 297 calories on average, which is pretty large. These results definitely leave room for improvement, so I wouldn't necessarily call our model "good" just yet. The R² score also suggests that approximately 6.73% of the variance in cooking times is explained by the model. Our results of a high MSE show signs of underfitting so we may have to change our model.
 
 ### Final Model
 #### Feature Engineering
@@ -102,6 +102,7 @@
         * ##### Defined by dividing the calories and minutes column, this feature captures the caloric density per unit of time, which is important because longer recipes may not be as calorie dense as you would typically think, some time is just taken passively cooking or preparing.
     * ##### `log_minutes`
         * ##### Defined by doing a log transformation of the `minutes` column, this helps us reduce right skew we observed in the analysis of cooking time, which is important because the log scale flattens the distribution making it a more useful linear model.
+* ##### Making the total number of quantitative features used for our final model 5.
 #### A New Model
 * ##### Ridge Regression:
     * ##### We used a Ridge Regression model which is still a Linear Regression model just with L2 regularization, that included a pipeline that contained:
@@ -115,10 +116,10 @@
     * ##### PolynomialFeatures(degree=2)
     * ##### ridge_alpha = 10
 #### Performance Comparison
-| Model                                      | MSE       | RMSE   |
-|--------------------------------------------|-----------|--------|
-| **Baseline Model** (Linear Regression)     | 88642.90  | ≈ 297.7|
-| **Final Model** (Ridge + Poly Features + Feature Engineering) | **26,573.7** | **≈ 163.0** |
+| Model                                      |MSE       |RMSE   |R²|
+|--------------------------------------------|-----------|--------|----|
+| **Baseline Model** (Linear Regression)     |88642.90|≈ 297.7|6.73%|
+| **Final Model** (Ridge + Poly Features + Feature Engineering) | **26,573.7** | **≈163.0** |**72.09%**|
 
 #### Our final model significant improves:
 * ##### By capturing the nonlinear relationships
