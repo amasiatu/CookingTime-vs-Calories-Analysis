@@ -113,12 +113,14 @@
     * ##### `log_minutes`
         * ##### Defined by doing a log transformation of the `minutes` column, this helps us reduce right skew we observed in the analysis of cooking time, which is important because the log scale flattens the distribution making it a more useful linear model.
 * ##### Making the total number of quantitative features used for our final model 5.
+
 #### A New Model
 * ##### Ridge Regression:
     * ##### We used a Ridge Regression model which is still a Linear Regression model just with L2 regularization, that included a pipeline that contained:
         * ##### `PolynomialFeatures` with degree=2 to capture nonlinear interactions
         * ##### `StandardScaler` to normalize all numeric inputs
     * ##### We chose a Ridge Regression Model because it balances interpretability =, sped, and the ability to model complex relationship (with polynomial terms) while regularizing to prevent overfitting.
+    
 #### Hyperparameter Tuning
 * #####  We tuned the regularization strength alpha using GridSearchCV with 5 fold cross-validation and the following parameter grid: 
         'ridge__alpha': [0.01, 0.1, 1, 10, 100] 
