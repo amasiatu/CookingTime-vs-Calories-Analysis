@@ -9,24 +9,28 @@
 ##### In addition to understanding cooking time, this dataset provides us with nutritional information that can further reveal the complexity of a recipe such as the number of steps and the number ingredients involved in a recipe. This can also help us answer a bigger question: what key nutritional information make a recipes calorie count higher? So whether users are a home cook or a professional chef, the findings of this analysis will offer data driven guidance about the choice of recipe one can choose rather than analyzing with just our tastebuds.
 #### Introduction of Columns
 ##### The dataset in the RAW_recipes.csv has **83782** rows containing information relevent to our analysis such as:
-| Column         | Description                                                                                      |
-|----------------|--------------------------------------------------------------------------------------------------|
-| `name`         | Title of the recipe                                                                              |
-| `minutes`      | Total time required to prepare and cook the recipe                                               |
-| `contributor_id` | Unique identifier for the user who contributed the recipe                                      |
-| `submitted`    | Date when the recipe was submitted                                                               |
-| `tags`         | List of tags associated with the recipe, such as `['desserts', 'chocolate', 'easy']`            |
-| `nutrition`    | A string containing a list of nutritional values: `['calories', 'total fat', 'sugar', 'sodium', 'protein', 'saturated fat', 'carbs']` |
-| `n_steps`      | Number of steps in the recipe instructions                                                       |
-| `steps`        | List of instructions for preparing the recipe                                                    |
-| `n_ingredients`| Total number of distinct ingredients used                                                        |
+
+| Column           | Description                                                                                                                                               |
+|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `name`           | Title of the recipe                                                                                                                                       |
+| `minutes`        | Total time required to prepare and cook the recipe                                                                                                       |
+| `contributor_id` | Unique identifier for the user who contributed the recipe                                                                                                |
+| `submitted`      | Date when the recipe was submitted                                                                                                                       |
+| `tags`           | List of tags associated with the recipe, such as `['desserts', 'chocolate', 'easy']`                                                                     |
+| `nutrition`      | A string containing a list of nutritional values: `['calories', 'total fat', 'sugar', 'sodium', 'protein', 'saturated fat', 'carbs']`                    |
+| `n_steps`        | Number of steps in the recipe instructions                                                                                                               |
+| `steps`          | List of instructions for preparing the recipe                                                                                                            |
+| `n_ingredients`  | Total number of distinct ingredients used                                                                                                                |
+
 
 ### Data Cleaning and Exploratory Data Analysis
 ##### Cleaning the data was a necessary step to make sure the data was consistent and reliable enough to be analyzed our process included:
 ##### 1. Parsing the Nutrition Column
 * ##### The nutrition column in our dataset stored all the nutrition information in lists so in order to extract the calorie information we extracted the calorie data from the list and stored it in a new column
+
 ##### 2. Identifying and Removing Outliers
 * ##### There were many absurd and unrealistic cooking time values that were above 2 years. We calculated the z-scores and filtered out the z-scores that were above 3 (outliers in the distribution). We also limited cooking time to 200 minutes to get a clearer view of our data.
+
 #### Cleaned Data Sample
 
 | Index  | Minutes | Calories | N_Steps | N_Ingredients |
@@ -37,6 +41,7 @@
 | 83779  | 40      | 59.2     | 7       | 8              |
 | 83780  | 29      | 188.0    | 9       | 10             |
 | 83781  | 20      | 174.9    | 5       | 7              |
+
 
 
 ##### 1.1 Univariate Analysis (Calories)
@@ -118,10 +123,12 @@
     * ##### PolynomialFeatures(degree=2)
     * ##### ridge_alpha = 10
 #### Performance Comparison
-| Model                                      |MSE        |RMSE    | R² |
-|--------------------------------------------|-----------|--------|----|
-| **Baseline Model** (Linear Regression)     |88642.90|≈ 297.7|6.73%|
-| **Final Model** (Ridge + Poly Features + Feature Engineering) | **26,573.7** | **≈163.0** |**72.09%**|
+
+| Model                                                          | MSE        | RMSE    | R²       |
+|----------------------------------------------------------------|------------|---------|----------|
+| **Baseline Model** (Linear Regression)                         | 88,642.90  | ≈ 297.7 | 6.73%    |
+| **Final Model** (Ridge + Polynomial Features + Feature Engineering) | **26,573.70** | **≈ 163.0** | **72.09%** |
+
 
 #### Our final model significant improves:
 * ##### By capturing the nonlinear relationships
