@@ -38,6 +38,7 @@
 | 0      | 40      | 138.4    | 10      | 9              |
 | 1      | 45      | 595.1    | 12      | 11             |
 | 2      | 40      | 194.8    | 6       | 9              |
+| ...    | ...     | ...      | ...     | ...            |
 | 83779  | 40      | 59.2     | 7       | 8              |
 | 83780  | 29      | 188.0    | 9       | 10             |
 | 83781  | 20      | 174.9    | 5       | 7              |
@@ -140,4 +141,4 @@
 * ##### By capturing the nonlinear relationships
 * ##### By adding domain-informed features
 
-#### This is a >60% reduction in MSE which means our predications are on average much closer to the actual calorie values, I would say this model is not that bad!
+#### This is a >60% reduction in MSE which means our predictions are on average much closer to the actual calorie values, I would say this model is not that bad!
