@@ -73,7 +73,7 @@
 
 #### Interesting Aggregates
 | Cooking Time (Minutes) | Average Calories |
-| ------------------------ | ------------------ | 
+|------------------------|------------------| 
 | 0–10                   | 269.74           |
 | 11–20                  | 322.87           |
 | 21–30                  | 358.55           |
@@ -126,8 +126,8 @@
 
 | Model                                                          | MSE        | RMSE    | R²       |
 |----------------------------------------------------------------|------------|---------|----------|
-| **Baseline Model** (Linear Regression)                         | 88,642.90  | ≈ 297.7 | 6.73%    |
-| **Final Model** (Ridge + Polynomial Features + Feature Engineering) | **26,573.70** | **≈ 163.0** | **72.09%** |
+| **Baseline Model** (Linear Regression)                         | 88,642.90  | ≈297.7 | 6.73%    |
+| **Final Model** (Ridge + Polynomial Features + Feature Engineering) | **26,573.70** | **≈163.0** | **72.09%** |
 
 
 #### Our final model significant improves:
