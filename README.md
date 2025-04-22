@@ -116,7 +116,7 @@
     * ##### PolynomialFeatures(degree=2)
     * ##### ridge_alpha = 10
 #### Performance Comparison
-| Model                                      |MSE       |RMSE   |R²|
+| Model                                      |MSE        |RMSE    | R² |
 |--------------------------------------------|-----------|--------|----|
 | **Baseline Model** (Linear Regression)     |88642.90|≈ 297.7|6.73%|
 | **Final Model** (Ridge + Poly Features + Feature Engineering) | **26,573.7** | **≈163.0** |**72.09%**|
@@ -125,3 +125,10 @@
 * ##### By capturing the nonlinear relationships
 * ##### By adding domain-informed features
 #### This is a >60% reduction in MSE which means our predications are on average much closer to the actual calorie values, I would say this model is not that bad!
+| semester    | Count |
+|-------------|-------|
+| Fall 2020   | 3     |
+| Winter 2021 | 2     |
+| Spring 2021 | 6     |
+| Summer 2021 | 4     |
+| Fall 2021   | 55    |
