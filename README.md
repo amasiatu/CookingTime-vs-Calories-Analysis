@@ -124,7 +124,6 @@
 #### Our final model significant improves:
 * ##### By capturing the nonlinear relationships
 * ##### By adding domain-informed features
-#### This is a >60% reduction in MSE which means our predications are on average much closer to the actual calorie values, I would say this model is not that bad!
 | semester    | Count |
 |-------------|-------|
 | Fall 2020   | 3     |
@@ -132,3 +131,5 @@
 | Spring 2021 | 6     |
 | Summer 2021 | 4     |
 | Fall 2021   | 55    |
+
+#### This is a >60% reduction in MSE which means our predications are on average much closer to the actual calorie values, I would say this model is not that bad!
