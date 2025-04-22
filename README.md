@@ -120,7 +120,7 @@
         * ##### `PolynomialFeatures` with degree=2 to capture nonlinear interactions
         * ##### `StandardScaler` to normalize all numeric inputs
     * ##### We chose a Ridge Regression Model because it balances interpretability =, sped, and the ability to model complex relationship (with polynomial terms) while regularizing to prevent overfitting.
-    
+
 #### Hyperparameter Tuning
 * #####  We tuned the regularization strength alpha using GridSearchCV with 5 fold cross-validation and the following parameter grid: 
         'ridge__alpha': [0.01, 0.1, 1, 10, 100] 
