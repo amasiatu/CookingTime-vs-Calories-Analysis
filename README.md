@@ -9,17 +9,8 @@
 ##### In addition to understanding cooking time, this dataset provides us with nutritional information that can further reveal the complexity of a recipe such as the number of steps and the number ingredients involved in a recipe. This can also help us answer a bigger question: what key nutritional information make a recipes calorie count higher? So whether users are a home cook or a professional chef, the findings of this analysis will offer data driven guidance about the choice of recipe one can choose rather than analyzing with just our tastebuds.
 #### Introduction of Columns
 ##### The dataset in the RAW_recipes.csv has **83782** rows containing information relevent to our analysis such as:
-| Column         | Description                                                                                      |
-|----------------|--------------------------------------------------------------------------------------------------|
-| `name`         | Title of the recipe                                                                              |
-| `minutes`      | Total time required to prepare and cook the recipe                                               |
-| `contributor_id` | Unique identifier for the user who contributed the recipe                                      |
-| `submitted`    | Date when the recipe was submitted                                                               |
-| `tags`         | List of tags associated with the recipe, such as `['desserts', 'chocolate', 'easy']`            |
-| `nutrition`    | A string containing a list of nutritional values: `['calories', 'total fat', 'sugar', 'sodium', 'protein', 'saturated fat', 'carbs']` |
-| `n_steps`      | Number of steps in the recipe instructions                                                       |
-| `steps`        | List of instructions for preparing the recipe                                                    |
-| `n_ingredients`| Total number of distinct ingredients used                                                        |
+<iframe src="assets/column_table.html" width="800" height="400" frameborder="0">
+</iframe>
 
 ### Data Cleaning and Exploratory Data Analysis
 ##### Cleaning the data was a necessary step to make sure the data was consistent and reliable enough to be analyzed our process included:
@@ -28,14 +19,8 @@
 ##### 2. Identifying and Removing Outliers
 * ##### There were many absurd and unrealistic cooking time values that were above 2 years. We calculated the z-scores and filtered out the z-scores that were above 3 (outliers in the distribution). We also limited cooking time to 200 minutes to get a clearer view of our data.
 #### Cleaned Data Sample
-| Index  | Minutes | Calories | N_Steps | N_Ingredients |
-|--------|---------|----------|---------|----------------|
-| 0      | 40      | 138.4    | 10      | 9              |
-| 1      | 45      | 595.1    | 12      | 11             |
-| 2      | 40      | 194.8    | 6       | 9              |
-| 83779  | 40      | 59.2     | 7       | 8              |
-| 83780  | 29      | 188.0    | 9       | 10             |
-| 83781  | 20      | 174.9    | 5       | 7              |
+<iframe src="assets/cleaned_table.html" width="800" height="400" frameborder="0">
+</iframe>
 
 ##### 1.1 Univariate Analysis (Calories)
 * ##### Below is the distribution of calories in the dataset limited to 5000 for clarity. It has a strong right skew which means most people's recipes typically fall between 150-500 calories per recipe.
@@ -65,7 +50,8 @@
  ></iframe>
 
 #### Interesting Aggregates
-'| minute_bins   |   calories |\n|:--------------|-----------:|\n| 0-10          |    269.744 |\n| 11-20         |    322.874 |\n| 21-30         |    358.547 |\n| 31-45         |    381.415 |\n| 46-60         |    423.886 |\n| 61-120        |    456.927 |\n| 120+          |    473.112 |'
+<iframe src="assets/aggregate_table.html" width="800" height="400" frameborder="0">
+</iframe>
 
 ##### Acoording to the table we group the cooking time in minutes into 10 minute bins and calculate the average calories per bin. According to the table we see an upward trend in the data which supports the idea the longe recipes seem to be more calorie dense.
 #### Imputation
