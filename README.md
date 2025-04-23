@@ -2,7 +2,7 @@
 #### Author: Chinyere Amasiatu
 ## Report for the Analyzing Calories vs. Cooking Time
 ### Introduction
-##### Cooking has a been necessity for a long time, from home cooks to chefs, recipes are the most remebered with our taste buds rather than with our brain. So let's begin to explore the intricacies of recipes using the **Recipe and Ratings** dataset! The Recipe and Ratings dataset contains many recipes which will help us source the relationship between different recipe characteristics that we may have never thought of before
+##### Cooking has a been necessity for a long time, from home cooks to chefs, recipes are the most remembered with our taste buds rather than with our brain. So let's begin to explore the intricacies of recipes using the **Recipe and Ratings** dataset! The Recipe and Ratings dataset contains many recipes which will help us source the relationship between different recipe characteristics that we may have never thought of before
 #### Central Question
 #### The longer a recipe takes to make, increases the calorie count?
 ##### This question lies under the understanding of the relationship between cooking time and calories. Cooking time is a vital attribute to recipes because it reveals the complexity of an individual recipe. By investigating the relationship between cooking time and calories we can uncover what information users would appreciate to balance their time and calorie intake.
